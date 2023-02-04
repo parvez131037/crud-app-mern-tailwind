@@ -41,14 +41,14 @@ const Edit = () => {
     
       <form onSubmit={handleEdit} className="flex flex-col max-w-[600px] w-full my-4">
         <label className='font-bold text-gray-600'>name:</label>
-        <input name="name" value={input.name} onChange={(e)=>setInput({...input, [e.target.name]:e.target.value})} type="text" className="border border-stone-600 rounded-md p-2 text-gray-500" />
+        <input name="name" value={input.name} onChange={(e)=>setInput({...input, [e.target.name]:e.target.value})} type="text" className="border border-stone-600 hover:border-blue-600 rounded-md p-2 text-gray-500" />
         <label className='mt-3 font-bold text-gray-600' >Email:</label>
-        <input name="email" value={input.email} onChange={(e)=>setInput({...input,[e.target.name]:e.target.value})} type="email" className="border border-stone-600 rounded-md p-2 text-gray-500" />
+        <input name="email" value={input.email} onChange={(e)=>setInput({...input,[e.target.name]:e.target.value})} type="email" className="border border-stone-600 hover:border-blue-600 rounded-md p-2 text-gray-500" />
         <label className='mt-3 font-bold text-gray-600'>age:</label>
-        <input name="age" value={input.age} onChange={(e)=>setInput({...input,[e.target.name]:e.target.value})} type="number" className="border border-stone-600 rounded-md p-2 text-gray-500" />
+        <input name="age" value={input.age} onChange={(e)=>setInput({...input,[e.target.name]:e.target.value})} type="number" className="border border-stone-600 hover:border-blue-600 rounded-md p-2 text-gray-500" />
         <div className='flex justify-evenly'>
-        <button type="submit" className=" bg-green-500 text-cyan-50 mt-4 p-2 px-4 rounded w-[25%]">Edit</button>
-        <button onClick={()=>{navigate("/")}} className=' bg-indigo-700 text-cyan-50 mt-4 p-2 px-4 rounded w-[25%]'>Back To Home</button>
+        <button type="submit" className=" bg-green-500 text-cyan-50 mt-4 h-8 px-4 rounded w-[70px]">Edit</button>
+        <button onClick={()=>{navigate("/")}} className=' bg-indigo-700 text-cyan-50 h-8 mt-4 px-4 rounded w-[70px]'>Home</button>
         </div>
         
       </form>

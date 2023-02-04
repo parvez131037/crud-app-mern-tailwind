@@ -49,8 +49,8 @@ const handleSubmit = async (e) => {
     <div>
       <h1 className="text-center font-bold text-2xl text-cyan-700">Fill the followings to add:</h1>
     </div>
-    <div className='max-w-[700px] mx-auto flex justify-center items-center p-4'>
-      <form onSubmit={handleSubmit} className="w-full flex flex-col">
+    <div className='w-full flex justify-center items-center p-4'>
+      <form onSubmit={handleSubmit} className="flex flex-col max-w-[700px] w-full">
         <label >Name:</label>
         <input name="name" value={input.name} onChange={(e)=>setInput({...input, [e.target.name]:e.target.value})} type="text" className="border border-stone-300 hover:border-red-700 rounded-md p-2" />
         <label >Email:</label>
@@ -62,9 +62,9 @@ const handleSubmit = async (e) => {
       
       </div>
       </div>
-      <div className="shadow-md">
-        <table className="w-full text-sm rounded-lg text-left text-gray-500">
-          <thead>
+      <div className="w-full">
+        <table className="max-w-[1240px] mx-auto shadow-md text-sm rounded-lg text-left text-gray-500">
+          <thead className="bg-gray-200">
             <tr className="">
               <th className="px-6 py-3 ">Name</th>
               <th className="px-6 py-3 ">E-mail</th>
@@ -76,7 +76,7 @@ const handleSubmit = async (e) => {
           <tbody>
           {users && users.map((user)=>{
             return(
-              <tr key={user._id} className="px-6 py-3">
+              <tr key={user._id} className="px-6 py-3 border-b-2">
                 <td className="px-6 py-3">{user.name}</td>
                 <td className="px-6 py-3">{user.email}</td>
                 <td className="px-6 py-3">{user.age}</td>
